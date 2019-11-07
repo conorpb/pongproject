@@ -25,11 +25,13 @@ public class LaunchBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(transform.position.y == 0 && transform.position.x == 0)
         {
-            Vector2 dir = Random.insideUnitCircle;
-
-            rb.velocity = speed * dir;
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Vector2 dir = Random.insideUnitCircle.normalized;
+                rb.velocity = speed * dir;
+            }
         }
     }
 }
