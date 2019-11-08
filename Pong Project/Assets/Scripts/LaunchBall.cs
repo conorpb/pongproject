@@ -25,9 +25,11 @@ public class LaunchBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if ball is in starting position so that it can't be reset during gameplay
         if(transform.position.y == 0 && transform.position.x == 0)
-        {   
-                if (Input.GetKey(KeyCode.Space))
+        {
+            //chooses random direction to launch the ball in when you press space
+            if (Input.GetKey(KeyCode.Space))
                 {
                     Vector2 dir = Random.insideUnitCircle.normalized;
                     if (dir.x < 0)
@@ -42,6 +44,7 @@ public class LaunchBall : MonoBehaviour
                 }
         }
         
+        //resets balls position and velocity when it reaches the edge of the screen
         if(transform.position.x <= -10 || transform.position.x >= 10)
         {
             rb.velocity = new Vector2(0, 0);

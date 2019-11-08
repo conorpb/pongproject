@@ -20,6 +20,7 @@ public class LeftPaddleController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+          //moves paddle up or down depending on input
         if(Input.GetKey(KeyCode.W))
         {
             transform.position = transform.position + new Vector3(0, speed * Time.deltaTime, 0);
