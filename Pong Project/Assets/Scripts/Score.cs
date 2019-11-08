@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public Text textObj;
     public int goal;
     public int score = 0;
-    public GameObject ball = FindObjectOfType<LaunchBall>().gameObject;
+    public GameObject ball;
 
     public void updateScore()
     {
@@ -25,6 +25,7 @@ public class Score : MonoBehaviour
             if (ball.transform.position.x < goal)
             {
                 score++;
+                //set the text to equal the score
                 textObj.text = "" + score;
             }
         }
@@ -33,7 +34,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       ball = FindObjectOfType<LaunchBall>().gameObject;
     }
 
     // Update is called once per frame
