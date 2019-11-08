@@ -13,7 +13,6 @@ using UnityEngine;
 public class LaunchBall : MonoBehaviour
 {
     public float speed = 10;
-    bool isLaunched = false;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -30,22 +29,27 @@ public class LaunchBall : MonoBehaviour
         {
             //chooses random direction to launch the ball in when you press space
             if (Input.GetKey(KeyCode.Space))
+            {
+                Vector2 dir = Random.insideUnitCircle.normalized;
+                if (dir.x < 0)
                 {
-                    Vector2 dir = Random.insideUnitCircle.normalized;
-                    if (dir.x < 0)
-                    {
-                        dir.x -= 10;
-                    }
-                    else if (dir.x > 0)
-                    {
-                        dir.x += 10;
-                    }
-                    rb.velocity = speed * dir.normalized;
+                    dir.x -= 10;
                 }
+                else if (dir.x > 0)
+                {
+                    dir.x += 10;
+                }
+                rb.velocity = speed * dir.normalized;
+            }
         }
         
+        
+    }
+
+    public void reset()
+    {
         //resets balls position and velocity when it reaches the edge of the screen
-        if(transform.position.x <= -10 || transform.position.x >= 10)
+        if (transform.position.x <= -10 || transform.position.x >= 10)
         {
             rb.velocity = new Vector2(0, 0);
             transform.position = new Vector3(0, 0, 0);

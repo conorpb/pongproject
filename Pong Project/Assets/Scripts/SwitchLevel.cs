@@ -11,10 +11,12 @@ using UnityEngine.SceneManagement;
 
 public class SwitchLevel : MonoBehaviour
 {
+    //find the scene of this name
     public string NextScene = "Level1";
 
     public void ChangeScene()
     {
+        //load that scene
         SceneManager.LoadScene(NextScene);
     }
 
