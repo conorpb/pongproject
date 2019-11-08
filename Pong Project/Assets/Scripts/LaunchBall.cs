@@ -13,7 +13,7 @@ using UnityEngine;
 public class LaunchBall : MonoBehaviour
 {
     public float speed = 10;
-
+    bool isLaunched = false;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -26,12 +26,26 @@ public class LaunchBall : MonoBehaviour
     void Update()
     {
         if(transform.position.y == 0 && transform.position.x == 0)
+        {   
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Vector2 dir = Random.insideUnitCircle.normalized;
+                    if (dir.x < 0)
+                    {
+                        dir.x -= 10;
+                    }
+                    else if (dir.x > 0)
+                    {
+                        dir.x += 10;
+                    }
+                    rb.velocity = speed * dir.normalized;
+                }
+        }
+        
+        if(transform.position.x <= -10 || transform.position.x >= 10)
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                Vector2 dir = Random.insideUnitCircle.normalized;
-                rb.velocity = speed * dir;
-            }
+            rb.velocity = new Vector2(0, 0);
+            transform.position = new Vector3(0, 0, 0);
         }
     }
 }
