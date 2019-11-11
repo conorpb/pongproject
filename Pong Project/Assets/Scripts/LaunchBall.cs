@@ -49,7 +49,7 @@ public class LaunchBall : MonoBehaviour
     public void reset()
     {
         //resets balls position and velocity when it reaches the edge of the screen
-        if (transform.position.x <= -10 || transform.position.x >= 10)
+        if (transform.position.x >= -10 || transform.position.x >= 10)
         {
             rb.velocity = new Vector2(0, 0);
             transform.position = new Vector3(0, 0, 0);
