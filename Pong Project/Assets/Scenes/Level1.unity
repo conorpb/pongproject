@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObj: {fileID: 1104333006}
-  goal: 9
+  goal: -9
   score: 0
   ball: {fileID: 1588389939}
   winScreen: PlayerTwoWins
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObj: {fileID: 1757660376}
-  goal: -9
+  goal: 9
   score: 0
   ball: {fileID: 1588389939}
   winScreen: PlayerOneWins
