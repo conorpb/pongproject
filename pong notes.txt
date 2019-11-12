@@ -1,0 +1,11 @@
+Liam: Producer and Tech Lead
+Conor: Director and Design Lead
+
+-Liam Created the main menu
+-Conor set up the game level
+-Conor Created controller for paddles
+-Liam created the launch script for the ball and the material for the ball
+-Conor edited the colliders of the paddles
+-Liam created the script for the score
+-Conor made the scenes for each player's victory
+-Conor added the victory screens to the open scenes list
