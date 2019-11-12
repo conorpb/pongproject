@@ -30,6 +30,7 @@ public class Score : MonoBehaviour
                 score++;
                 //change the text to equal the score
                 textObj.text = "" + score;
+                ball.GetComponent<LaunchBall>().reset();
             }
         }
         else
@@ -40,6 +41,7 @@ public class Score : MonoBehaviour
                 score++;
                 //set the text to equal the score
                 textObj.text = "" + score;
+                ball.GetComponent<LaunchBall>().reset();
             }
         }
     }

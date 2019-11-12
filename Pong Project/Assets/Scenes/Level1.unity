@@ -553,6 +553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 7662097452345969729, guid: 0e4c26e7b405b38468b4bb3e70cbfe07,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7662097452345969757, guid: 0e4c26e7b405b38468b4bb3e70cbfe07,
         type: 3}
       propertyPath: m_Constraints
