@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       ball = FindObjectOfType<LaunchBall>().gameObject;
+      
     }
 
     public void updateScore()
@@ -45,6 +45,8 @@ public class Score : MonoBehaviour
             }
         }
     }
+
+
 
     // Update is called once per frame
     void Update()

@@ -13,8 +13,9 @@ using UnityEngine;
 public class LaunchBall : MonoBehaviour
 {
     public float speed = 10;
-    bool hasReset = false;
     Rigidbody2D rb;
+    public bool launched = false;
+    public Vector3 startPos;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class LaunchBall : MonoBehaviour
     void Update()
     {
         //checks if ball is in starting position so that it can't be reset during gameplay
-        if(transform.position.y == 0 && transform.position.x == 0)
+        if(!launched)
         {
             //chooses random direction to launch the ball in when you press space
             if (Input.GetKey(KeyCode.Space))
@@ -41,6 +42,7 @@ public class LaunchBall : MonoBehaviour
                     dir.x += 10;
                 }
                 rb.velocity = speed * dir.normalized;
+                launched = true;
             }
         }
         
@@ -53,8 +55,8 @@ public class LaunchBall : MonoBehaviour
         if (transform.position.x >= -10 || transform.position.x >= 10)
         {
             rb.velocity = new Vector2(0, 0);
-            transform.position = new Vector3(0, 0, 0);
-            hasReset = true;
+            transform.position = startPos;
+            launched = false;
         }
     }
 }
