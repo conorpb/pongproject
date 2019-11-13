@@ -13,6 +13,7 @@ using UnityEngine;
 public class LaunchBall : MonoBehaviour
 {
     public float speed = 10;
+    bool hasReset = false;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -53,6 +54,7 @@ public class LaunchBall : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
             transform.position = new Vector3(0, 0, 0);
+            hasReset = true;
         }
     }
 }
