@@ -16,8 +16,17 @@ public class SwitchLevel : MonoBehaviour
 
     public void ChangeScene()
     {
-        //load that scene
-        SceneManager.LoadScene(NextScene);
+        if (NextScene == "End")
+        {
+            //if the scene loaded is "End", quit the game
+            Application.Quit();
+        }
+        else
+        {
+            //load that scene
+            SceneManager.LoadScene(NextScene);
+        }
+
     }
 
     // Start is called before the first frame update
