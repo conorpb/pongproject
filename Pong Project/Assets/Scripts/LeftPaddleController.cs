@@ -7,9 +7,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LeftPaddleController : MonoBehaviour
 {
+    //boolean deciding whether or not the paddle will use the shrinking code
+    public bool shrinks = false;
+
+
+    private void Shrinking(Collision2D collision)
+    {
+        //runs code if shrinks is true
+        if (shrinks == true)
+        {
+            if(collision.gameObject.GetComponent<LaunchBall>())
+            {
+                transform.localScale -= new Vector3(0, 1, 0);
+            }
+        }
+    }
+
     public float speed = 10;
     // Start is called before the first frame update
     void Start()
@@ -29,5 +46,6 @@ public class LeftPaddleController : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(0, -speed * Time.deltaTime, 0);
         }
+
     }
 }
