@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: shrinks
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3508645056822896738, guid: d3a555e79ffe6f045b802a3edefa73ed,
+        type: 3}
+      propertyPath: flashes
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a555e79ffe6f045b802a3edefa73ed, type: 3}
 --- !u!1 &265592322
@@ -743,6 +748,11 @@ PrefabInstance:
     - target: {fileID: 2033771850930782631, guid: 53ca38ecc769dfe4fb4db3871d9b5024,
         type: 3}
       propertyPath: shrinks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033771850930782631, guid: 53ca38ecc769dfe4fb4db3871d9b5024,
+        type: 3}
+      propertyPath: flashes
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
