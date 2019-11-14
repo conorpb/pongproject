@@ -14,8 +14,28 @@ public class LeftPaddleController : MonoBehaviour
     //boolean deciding whether or not the paddle will use the shrinking code
     public bool shrinks = false;
 
+    //boolean deciding whether or not paddle will flash
+    public bool flashes = false;
+
+    // coroutine causes paddle to turn grey then turn back 0.1 seconds later
+    IEnumerator ColorFlash()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //runs code if flashes is true
+        if (flashes == true)
+        {
+            if (collision.gameObject.GetComponent<LaunchBall>())
+            {
+                StartCoroutine("ColorFlash");
+            }
+        }
+
         //runs code if shrinks is true
         if (shrinks == true)
         {  
