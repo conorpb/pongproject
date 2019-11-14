@@ -12,10 +12,22 @@ public class RightPaddleController : MonoBehaviour
 {
     public bool shrinks = false;
     public float speed = 10;
-    // Start is called before the first frame update
+
+    IEnumerator ColorFlash()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.GetComponent<LaunchBall>())
+        {
+            StartCoroutine("ColorFlash");
+
+        }
+
         //runs code if shrinks is true
         if (shrinks == true)
         {

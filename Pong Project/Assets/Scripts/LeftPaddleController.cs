@@ -1,6 +1,6 @@
 ﻿/* 
  By: Conor Brennan
- Date: 11/7/19
+ Date: 11/14/19
  Description: Up and down controlls for the left paddle.
  */
 
@@ -10,12 +10,24 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class LeftPaddleController : MonoBehaviour
-{
+{ 
     //boolean deciding whether or not the paddle will use the shrinking code
     public bool shrinks = false;
 
+    IEnumerator ColorFlash()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.GetComponent<LaunchBall>())
+        {
+            StartCoroutine("ColorFlash");
+
+        }
+
         //runs code if shrinks is true
         if (shrinks == true)
         {  
