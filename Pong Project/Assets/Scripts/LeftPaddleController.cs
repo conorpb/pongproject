@@ -1,6 +1,6 @@
 ﻿/* 
  By: Conor Brennan
- Date: 11/7/19
+ Date: 11/14/19
  Description: Up and down controlls for the left paddle.
  */
 
@@ -23,6 +23,7 @@ public class LeftPaddleController : MonoBehaviour
             if(collision.gameObject.GetComponent<LaunchBall>())
             {
                 transform.localScale -= new Vector3(0, 0.1f, 0);
+                SoundManagerScript.PlaySound("ContactSound");
             }
 
             //cap the shrinking at 0.8
