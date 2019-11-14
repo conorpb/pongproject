@@ -10,8 +10,29 @@ using UnityEngine;
 
 public class RightPaddleController : MonoBehaviour
 {
+    public bool shrinks = false;
     public float speed = 10;
     // Start is called before the first frame update
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //runs code if shrinks is true
+        if (shrinks == true)
+        {
+            //when colliding with the ball, shrink along the y-axis
+            if (collision.gameObject.GetComponent<LaunchBall>())
+            {
+                transform.localScale -= new Vector3(0, 0.1f, 0);
+            }
+
+            //cap the shrinking at 0.8
+            if (transform.localScale.y <= 0.8)
+            {
+                shrinks = false;
+            }
+        }
+    }
+
     void Start()
     {
         

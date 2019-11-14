@@ -13,15 +13,12 @@ public class LeftPaddleController : MonoBehaviour
 {
     //boolean deciding whether or not the paddle will use the shrinking code
     public bool shrinks = false;
-    public bool shrinked = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //runs code if shrinks is true
         if (shrinks == true)
-        {
-            shrinked = true;
-            
+        {  
             //when colliding with the ball, shrink along the y-axis
             if(collision.gameObject.GetComponent<LaunchBall>())
             {

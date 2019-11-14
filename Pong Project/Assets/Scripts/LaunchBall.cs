@@ -57,6 +57,8 @@ public class LaunchBall : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
             transform.position = startPos;
             launched = false;
+           FindObjectOfType<LeftPaddleController>().transform.localScale = new Vector3(0.3f, 2, 0);
+            FindObjectOfType<RightPaddleController>().transform.localScale = new Vector3(0.3f, 2, 0);
         }
     }
 }
