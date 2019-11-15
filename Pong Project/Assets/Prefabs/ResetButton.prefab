@@ -224,4 +224,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c8bf5bd06b1c049abbe77e235d92e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Level1
+  NextScene: Level2
