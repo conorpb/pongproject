@@ -19,6 +19,8 @@ public class Score : MonoBehaviour
       
     }
 
+    public bool hasReset;
+
     public void updateScore()
     {
         //check if the score is above or below 0
@@ -31,6 +33,11 @@ public class Score : MonoBehaviour
                 //change the text to equal the score
                 textObj.text = "" + score;
                 ball.GetComponent<LaunchBall>().reset();
+                hasReset = true;
+            }
+            else
+            {
+                hasReset = false;
             }
         }
         else
@@ -42,8 +49,14 @@ public class Score : MonoBehaviour
                 //set the text to equal the score
                 textObj.text = "" + score;
                 ball.GetComponent<LaunchBall>().reset();
+                hasReset = true;
+            }
+            else
+            {
+                hasReset = false;
             }
         }
+        
     }
 
 
