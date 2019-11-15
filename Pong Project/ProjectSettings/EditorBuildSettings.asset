@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerOneWinsBasic.unity
     guid: 01532b7d9bfc5fa478289c9792f1632f
+  - enabled: 1
+    path: Assets/Scenes/PlayerTwoWins.unity
+    guid: aad5b863e89b68a4aa90b7283c7bba43
   m_configObjects: {}
