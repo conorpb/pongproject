@@ -647,7 +647,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 76001ad0bddc94543be36241b6afe047, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -801,6 +801,42 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 76001ad0bddc94543be36241b6afe047,
+        type: 3}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107903, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107903, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e07e00f7b66f0946a49a66d24131bb2, type: 3}
 --- !u!1001 &4133116184442668317
@@ -919,6 +955,52 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212649, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212649, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 76001ad0bddc94543be36241b6afe047,
+        type: 3}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_Text
+      value: Quit Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133116185917212648, guid: 47c4797272fa78b46a694c81c15eba4e,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c4797272fa78b46a694c81c15eba4e, type: 3}
@@ -1043,6 +1125,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 76001ad0bddc94543be36241b6afe047,
+        type: 3}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107776, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107903, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958755353010107903, guid: 2e07e00f7b66f0946a49a66d24131bb2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e07e00f7b66f0946a49a66d24131bb2, type: 3}
