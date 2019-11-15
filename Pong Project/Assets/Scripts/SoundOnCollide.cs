@@ -14,7 +14,7 @@ public class SoundOnCollide : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<LaunchBall>())
         {
-            SoundManagerScript.PlaySound("ContactSound");
+            SoundManagerScript.PlaySound("ContactSound(complete)");
         }
     }
 

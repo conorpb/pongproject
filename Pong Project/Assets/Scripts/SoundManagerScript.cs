@@ -16,7 +16,7 @@ public class SoundManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BallContactSound = Resources.Load<AudioClip>("ContactSound");
+        BallContactSound = Resources.Load<AudioClip>("ContactSound(complete)");
         AudioSrc = GetComponent<AudioSource>();
     }
 
@@ -24,7 +24,7 @@ public class SoundManagerScript : MonoBehaviour
     {
         switch (clip)
         {
-            case "ContactSound":
+            case "ContactSound(complete)":
                 AudioSrc.PlayOneShot(BallContactSound);
                 break;
         }
