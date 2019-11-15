@@ -51,14 +51,19 @@ public class LaunchBall : MonoBehaviour
 
     public void reset()
     {
-        //resets balls position and velocity when it reaches the edge of the screen
-        if (transform.position.x >= -10 || transform.position.x >= 10)
+        rb.velocity = new Vector2(0, 0);
+        transform.position = startPos;
+        launched = false;
+
+        if (FindObjectOfType<RightPaddleController>().shrinked == true)
         {
-            rb.velocity = new Vector2(0, 0);
-            transform.position = startPos;
-            launched = false;
-           FindObjectOfType<LeftPaddleController>().transform.localScale = new Vector3(0.3f, 2, 0);
             FindObjectOfType<RightPaddleController>().transform.localScale = new Vector3(0.3f, 2, 0);
+            FindObjectOfType<RightPaddleController>().shrinks = true;
+        }
+        if (FindObjectOfType<LeftPaddleController>().shrinked == true)
+        {
+            FindObjectOfType<LeftPaddleController>().transform.localScale = new Vector3(0.3f, 2, 0);
+            FindObjectOfType<LeftPaddleController>().shrinks = true;
         }
     }
 }

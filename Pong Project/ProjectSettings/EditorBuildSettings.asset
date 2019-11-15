@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerOneWins.unity
     guid: f538e251c8cd00b4c830624dc0def97a
   - enabled: 1
-    path: Assets/Scenes/PlayerTwoWins.unity
+    path: Assets/Scenes/PlayerTwoWinsBasic.unity
     guid: 813030d007b78d04ea2d8cac6f339c08
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 81bbe40590be11940a4181b2b6db1031
+  - enabled: 1
+    path: Assets/Scenes/PlayerOneWinsBasic.unity
+    guid: 01532b7d9bfc5fa478289c9792f1632f
   m_configObjects: {}

@@ -15,6 +15,8 @@ public class RightPaddleController : MonoBehaviour
     //boolean deciding whether or not paddle will flash
     public bool flashes = false;
     public float speed = 10;
+    //checks if shrinks has ever been true
+    public bool shrinked = false;
 
     // coroutine causes paddle to turn grey then turn back 0.1 seconds later
     IEnumerator ColorFlash()
@@ -38,10 +40,11 @@ public class RightPaddleController : MonoBehaviour
         //runs code if shrinks is true
         if (shrinks == true)
         {
+            shrinked = true;
             //when colliding with the ball, shrink along the y-axis
             if (collision.gameObject.GetComponent<LaunchBall>())
             {
-                transform.localScale -= new Vector3(0, 0.1f, 0);
+                transform.localScale -= new Vector3(0, 0.2f, 0);
             }
 
             //cap the shrinking at 0.8
